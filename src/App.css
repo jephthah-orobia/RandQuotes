@@ -1,39 +1,50 @@
-.App {
-  text-align: center;
+.card {
+  min-width: unset;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.redux-logo {
+  height: 1.2rem;
+  display: inline;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
+
+.contact-links,
+.tech-stacks {
+  display: inline-flex;
+  list-style: none;
+}
+
+.tech-stacks {
+  justify-content: flex-end;
+}
+
+.contact-links li,
+.tech-stacks>li {
+  display: inline-block;
+  color: inherit;
+  margin: 0 0.3rem 0 0.3rem;
+}
+
+.contact-links a {
+  padding: 0.3rem;
+}
+
+.redux-logo {
+  height: 1.2rem;
+  filter: contrast(0%) brightness(100%) invert(100%);
+}
+
+@media (max-width: 576px) {
+  .tech-stacks span {
+    display: none;
+    visibility: collapse;
   }
-}
 
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-}
-
-.App-link {
-  color: rgb(112, 76, 182);
-}
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
+  #subtitle {
+    display: block;
   }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
+
+  .card {
+    min-width: 320px;
   }
 }
