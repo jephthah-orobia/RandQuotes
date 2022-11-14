@@ -8,13 +8,11 @@ const initialState = {
     index: index
 };
 
-
 export const quotesSlice = createSlice({
     name: 'quotes',
     initialState,
     reducers: {
         getNext: (state) => {
-            console.log('currentIndex: ' + state.index);
             let rq = randomQuote(state.index);
             state.text = rq.text;
             state.author = rq.author;
@@ -31,5 +29,7 @@ export const { getNext } = quotesSlice.actions;
 export const selectText = (state) => state.quotes.text;
 
 export const selectAuthor = (state) => state.quotes.author;
+
+export const selectIndex = (state) => state.quotes.index;
 
 export default quotesSlice.reducer;

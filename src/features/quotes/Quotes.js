@@ -1,5 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+
+
 import {
     selectAuthor,
     selectText,
@@ -14,7 +16,7 @@ export function Quotes() {
     return (
         <div className="row min-vw-100 vh-100 align-content-center justify-content-center">
             <div id="quote-box" className="card rounded-4 col-xxl-5 col-xl-6 col-lg-7 col-md-8 col-sm-9 col-10 py-3 px-4 shadow-lg">
-                <div className="text h3 row p-3" id="text">{text}</div>
+                <div className="text text-center h3 row p-3" id="text">{text}</div>
                 <div className="text h4 p-3 text-end" id="author">&mdash;&nbsp;{author}</div>
                 <div className="row py-3">
                     <span className="col-6">
@@ -31,7 +33,9 @@ export function Quotes() {
                     <span className="col-6 text-end">
                         <button
                             id="new-quote"
-                            onClick={()=>dispatch(getNext())}
+                            onClick={() => {
+                                dispatch(getNext());
+                            }}
                             className="btn btn-primary fw-bold">New Quote</button>
                     </span>
                 </div>

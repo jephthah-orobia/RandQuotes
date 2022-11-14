@@ -12,7 +12,7 @@ const quotesBank = [
         author: 'H. L. Mencken'
     },
     {
-        text: "No man ever steps in the same river twice, for it's not the same river and he's not the same man.",
+        text: 'No man ever steps in the same river twice, for it\'s not the same river and he\'s not the same man.',
         author: 'Heraclitus'
     },
     {
@@ -57,11 +57,7 @@ export const randomQuote = (prevIndex = -1) => {
     const indices = quotesBank.map((val, i) => i);
     if (prevIndex >= 0)
         indices.splice(prevIndex, 1);
-    console.log(indices);
-    let rand = Math.round(Math.random() * (indices.length - 1));
-    console.log('seed: ' + rand);
-    let randI = indices[rand];
-    console.log('new index: ' + randI);
+    let randI = indices[Math.round(Math.random() * (indices.length - 1))];
     return Object.assign({}, quotesBank[randI], { index: randI });
 };
 

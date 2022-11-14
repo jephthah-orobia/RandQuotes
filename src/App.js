@@ -1,11 +1,28 @@
 import React from 'react';
 import { Quotes } from './features/quotes/Quotes';
+import { useSelector } from 'react-redux';
+import { selectIndex } from './features/quotes/quotesSlice';
 import './App.css';
 
 function App() {
+  const index = useSelector(selectIndex);
   return (
-    <div className="container-fluid min-vw-100 min-vh-100 bg-black m-0">
-
+    <div className={"container-fluid min-vw-100 min-vh-100 m-0 bg bg-" + index}>
+      <div class="d-none" aria-hidden="true">
+        <img src="http://www.outdoor-photos.com/_photo/3770240.jpg" alt="pre-cached background" />
+        <img src="http://www.outdoor-photos.com/_photo/4398577.jpg" alt="pre-cached background" />
+        <img src="http://www.outdoor-photos.com/_photo/4737919.jpg" alt="pre-cached background" />
+        <img src="http://www.outdoor-photos.com/_photo/2379874.jpg" alt="pre-cached background" />
+        <img src="http://www.outdoor-photos.com/_photo/3426759.jpg" alt="pre-cached background" />
+        <img src="http://www.outdoor-photos.com/_photo/3470056.jpg" alt="pre-cached background" />
+        <img src="http://www.outdoor-photos.com/_photo/1886964.jpg" alt="pre-cached background" />
+        <img src="http://www.outdoor-photos.com/_photo/3784535.jpg" alt="pre-cached background" />
+        <img src="http://www.outdoor-photos.com/_photo/3559540.jpg" alt="pre-cached background" />
+        <img src="http://www.outdoor-photos.com/_photo/1752471.jpg" alt="pre-cached background" />
+        <img src="http://www.outdoor-photos.com/_photo/2505043.jpg" alt="pre-cached background" />
+        <img src="http://www.outdoor-photos.com/_photo/4411998.jpg" alt="pre-cached background" />
+        <img src="http://www.outdoor-photos.com/_photo/4059961.jpg" alt="pre-cached background" s />
+      </div>
       {/* Header */}
 
       <div className="row text-bg-dark pt-2 fixed-top">
