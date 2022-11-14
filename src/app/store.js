@@ -1,8 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import quotesReducer from '../features/quotes/quotesSlice';
+//import bgReducer from '../features/bg/bgSlice';
+
+
+
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    quotes: quotesReducer
+    //background: bgReducer
   },
 });
